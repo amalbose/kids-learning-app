@@ -36,5 +36,19 @@
             android:layout_height="wrap_content"
             android:onClick="startNumbers"
             android:text="Numbers" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startAnimals"
+            android:text="Animals" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startBirds"
+            android:text="Birds" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

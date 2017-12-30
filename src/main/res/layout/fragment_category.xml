@@ -4,10 +4,10 @@
     android:id="@+id/alphabetFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.amalbose.kidslearningapp.fragments.AlphabetFragment">
+    tools:context="com.amalbose.kidslearningapp.fragments.CategoryFragment">
 
     <TextView
-        android:id="@+id/alphabet_label"
+        android:id="@+id/index_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_green_light"
@@ -34,12 +34,12 @@
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alphabet_label"
+        app:layout_constraintTop_toBottomOf="@+id/index_label"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
     <ImageView
-        android:id="@+id/alphabetImage"
+        android:id="@+id/categoryImage"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

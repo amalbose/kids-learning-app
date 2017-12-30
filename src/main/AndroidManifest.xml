@@ -28,19 +28,10 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".Alphabets"
+            android:name=".MenuCategory"
             android:label="@string/title_activity_alphabets"
             android:parentActivityName=".LearningMenu"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LearningMenu" />
-        </activity>
-        <activity
-            android:name=".Numbers"
-            android:label="@string/title_activity_numbers"
-            android:parentActivityName=".LearningMenu"
-            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LearningMenu" />
