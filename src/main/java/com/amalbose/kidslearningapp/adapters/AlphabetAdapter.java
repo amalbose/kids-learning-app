@@ -80,6 +80,6 @@ public class AlphabetAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 26;
+        return data.length;
     }
 }

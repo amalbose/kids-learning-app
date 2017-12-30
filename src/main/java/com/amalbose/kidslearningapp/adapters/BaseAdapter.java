@@ -18,11 +18,13 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
 
     private int[] data;
     private String[] dataTitle;
+    private String title;
 
     public BaseAdapter(FragmentManager fm, MenuType type, int[]  data, String[] dataTitle) {
         super(fm);
         this.type = type;
         this.data = data;
+        this.title = type.getTitle();
         this.dataTitle = dataTitle;
     }
 
@@ -36,7 +38,7 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
     }
 
     public String getIndexLabel(int index){
-        return String.valueOf(index + 1);
+        return dataTitle[index];
     }
 
     public int getImageResource(int index) {
@@ -46,4 +48,8 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
     public String getSpeakText(int sectionNumber) {
         return dataTitle[sectionNumber];
     }
+
+    public String getTitle() {
+        return this.title;
+    };
 }

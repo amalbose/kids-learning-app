@@ -5,5 +5,18 @@ package com.amalbose.kidslearningapp.common;
  */
 
 public enum MenuType {
-    ALPHABETS, NUMBERS
+    ALPHABETS("Alphabets"),
+    ANIMALS("Animals"),
+    BIRDS("Birds"),
+    NUMBERS ("Numbers");
+
+    private final String title;
+
+    private MenuType(String title){
+        this.title = title;
+    }
+
+    public String getTitle(){
+        return this.title;
+    }
 }

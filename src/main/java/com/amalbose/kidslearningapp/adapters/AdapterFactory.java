@@ -16,6 +16,10 @@ public class AdapterFactory {
                 return new AlphabetAdapter(fm);
             case NUMBERS:
                 return new NumberAdapter(fm);
+            case ANIMALS:
+                return new AnimalAdapter(fm);
+            case BIRDS:
+                return new BirdAdapter(fm);
         }
         return null;
     }

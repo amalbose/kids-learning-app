@@ -48,10 +48,10 @@ public class NumberAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 10;
+        return data.length;
     }
 
     public String getSpeakText(int sectionNumber) {
-        return (sectionNumber + 1) + " " + dataTitle[sectionNumber];
+        return String.valueOf(sectionNumber + 1);
     }
 }

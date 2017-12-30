@@ -27,12 +27,13 @@ public class MenuCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+        mSectionsPagerAdapter = AdapterFactory.getAdapter((MenuType) getIntent().getExtras().get(Common.CATEGORY_TYPE), getSupportFragmentManager());
+
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(mSectionsPagerAdapter.getTitle());
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = AdapterFactory.getAdapter((MenuType) getIntent().getExtras().get(Common.CATEGORY_TYPE), getSupportFragmentManager());
+
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);

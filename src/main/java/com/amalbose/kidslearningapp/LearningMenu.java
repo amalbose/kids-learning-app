@@ -22,17 +22,25 @@ public class LearningMenu extends AppCompatActivity {
     }
 
     public void startAlphabets(View v) {
-        Intent intent = new Intent(this, MenuCategory.class);
-        Bundle args = new Bundle();
-        args.putSerializable(Common.CATEGORY_TYPE, MenuType.ALPHABETS);
-        intent.putExtras(args);
-        startActivity(intent);
+        startMenuActivity(MenuType.ALPHABETS);
     }
 
     public void startNumbers(View v) {
+        startMenuActivity(MenuType.NUMBERS);
+    }
+
+    public void startAnimals(View v) {
+        startMenuActivity(MenuType.ANIMALS);
+    }
+
+    public void startBirds(View v) {
+        startMenuActivity(MenuType.BIRDS);
+    }
+
+    private void startMenuActivity(MenuType type) {
         Intent intent = new Intent(this, MenuCategory.class);
         Bundle args = new Bundle();
-        args.putSerializable(Common.CATEGORY_TYPE, MenuType.NUMBERS);
+        args.putSerializable(Common.CATEGORY_TYPE, type);
         intent.putExtras(args);
         startActivity(intent);
     }
