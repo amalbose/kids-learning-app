@@ -1,28 +1,57 @@
 package com.amalbose.kidslearningapp.adapters;
 
-import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 
-import com.amalbose.kidslearningapp.fragments.NumberFragment;
+import com.amalbose.kidslearningapp.R;
+import com.amalbose.kidslearningapp.common.MenuType;
 
 /**
  * Created by amalbose on 27/12/17.
  */
 
-public class NumberAdapter extends FragmentPagerAdapter {
+public class NumberAdapter extends BaseAdapter {
+
+    private static int[] data = new int[]{
+            R.drawable.cake,
+            R.drawable.rose,
+            R.drawable.bag,
+            R.drawable.bulb,
+            R.drawable.pencil,
+            R.drawable.egg,
+            R.drawable.crayons,
+            R.drawable.ballbearings,
+            R.drawable.gems,
+            R.drawable.balls,
+    };
+
+    private static String[] dataTitle = new String[]{
+            "Cake",
+            "Roses",
+            "Bags",
+            "Bulbs",
+            "Pencils",
+            "Eggs",
+            "Crayons",
+            "Balls",
+            "Gems",
+            "Balls"
+    };
 
     public NumberAdapter(FragmentManager fm) {
-        super(fm);
+        super(fm, MenuType.NUMBERS, data, dataTitle);
     }
 
-    @Override
-    public Fragment getItem(int position) {
-        return NumberFragment.newInstance(position + 1);
+    public String getIndexLabel(int index){
+        return String.valueOf(index + 1);
     }
 
     @Override
     public int getCount() {
         return 10;
+    }
+
+    public String getSpeakText(int sectionNumber) {
+        return (sectionNumber + 1) + " " + dataTitle[sectionNumber];
     }
 }
