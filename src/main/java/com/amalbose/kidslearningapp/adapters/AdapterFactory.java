@@ -20,6 +20,10 @@ public class AdapterFactory {
                 return new AnimalAdapter(fm);
             case BIRDS:
                 return new BirdAdapter(fm);
+            case COLOR:
+                return new ColorAdapter(fm);
+            case SHAPE:
+                return new ShapeAdapter(fm);
         }
         return null;
     }

@@ -8,7 +8,9 @@ public enum MenuType {
     ALPHABETS("Alphabets"),
     ANIMALS("Animals"),
     BIRDS("Birds"),
-    NUMBERS ("Numbers");
+    NUMBERS ("Numbers"),
+    COLOR("Colors"),
+    SHAPE("Shape");
 
     private final String title;
 

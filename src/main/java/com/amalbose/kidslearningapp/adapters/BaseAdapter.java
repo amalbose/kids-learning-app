@@ -4,7 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.amalbose.kidslearningapp.R;
 import com.amalbose.kidslearningapp.common.BaseModel;
+import com.amalbose.kidslearningapp.common.MenuFragmentType;
 import com.amalbose.kidslearningapp.common.MenuType;
 import com.amalbose.kidslearningapp.fragments.CategoryFragment;
 
@@ -14,18 +16,18 @@ import com.amalbose.kidslearningapp.fragments.CategoryFragment;
 
 public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseModel {
 
-    private MenuType type;
-
     private int[] data;
     private String[] dataTitle;
     private String title;
+    private MenuFragmentType fragmentType;
+    private int fragmentLayout;
 
-    public BaseAdapter(FragmentManager fm, MenuType type, int[]  data, String[] dataTitle) {
+    public BaseAdapter(FragmentManager fm, MenuType type, int[] data, String[] dataTitle) {
         super(fm);
-        this.type = type;
         this.data = data;
         this.title = type.getTitle();
         this.dataTitle = dataTitle;
+        this.setFragmentType(MenuFragmentType.IMAGE);
     }
 
     @Override
@@ -33,11 +35,11 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
         return CategoryFragment.newInstance(position, this);
     }
 
-    public String getLabel(int index){
+    public String getLabel(int index) {
         return dataTitle[index];
     }
 
-    public String getIndexLabel(int index){
+    public String getIndexLabel(int index) {
         return dataTitle[index];
     }
 
@@ -51,5 +53,28 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
 
     public String getTitle() {
         return this.title;
-    };
+    }
+
+    public void setFragmentType(MenuFragmentType fragmentType) {
+        this.fragmentType = fragmentType;
+        switch (fragmentType) {
+            case SHAPE:
+                this.fragmentLayout = R.layout.fragment_shape;
+                break;
+            default:
+                this.fragmentLayout = R.layout.fragment_category;
+        }
+    }
+
+    public MenuFragmentType getFragmentType(){
+        return this.fragmentType;
+    }
+
+    public int getFragment() {
+        return this.fragmentLayout;
+    }
+
+    public int getColor(int index){
+        return 0xFFFFFFFF;
+    }
 }

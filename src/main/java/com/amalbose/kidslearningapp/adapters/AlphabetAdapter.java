@@ -78,6 +78,10 @@ public class AlphabetAdapter extends BaseAdapter {
         return dataTitle[index].substring(0, 1);
     }
 
+    public String getSpeakText(int sectionNumber) {
+        return getIndexLabel(sectionNumber) + " for " + dataTitle[sectionNumber];
+    }
+
     @Override
     public int getCount() {
         return data.length;

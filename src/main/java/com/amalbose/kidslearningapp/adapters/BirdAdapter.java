@@ -50,7 +50,7 @@ public class BirdAdapter extends BaseAdapter {
     };
 
     public BirdAdapter(FragmentManager fm) {
-        super(fm, MenuType.ANIMALS, data, dataTitle);
+        super(fm, MenuType.BIRDS, data, dataTitle);
     }
 
     public String getLabel(int index){

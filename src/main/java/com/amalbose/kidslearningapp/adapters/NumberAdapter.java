@@ -20,7 +20,7 @@ public class NumberAdapter extends BaseAdapter {
             R.drawable.pencil,
             R.drawable.egg,
             R.drawable.crayons,
-            R.drawable.ballbearings,
+            R.drawable.erasors,
             R.drawable.gems,
             R.drawable.balls,
     };
@@ -33,7 +33,7 @@ public class NumberAdapter extends BaseAdapter {
             "Pencils",
             "Eggs",
             "Crayons",
-            "Balls",
+            "Erasors",
             "Gems",
             "Balls"
     };

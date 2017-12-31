@@ -37,6 +37,14 @@ public class LearningMenu extends AppCompatActivity {
         startMenuActivity(MenuType.BIRDS);
     }
 
+    public void startColors(View v) {
+        startMenuActivity(MenuType.COLOR);
+    }
+
+    public void startShapes(View v) {
+        startMenuActivity(MenuType.SHAPE);
+    }
+
     private void startMenuActivity(MenuType type) {
         Intent intent = new Intent(this, MenuCategory.class);
         Bundle args = new Bundle();

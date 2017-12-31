@@ -6,6 +6,10 @@ package com.amalbose.kidslearningapp.common;
 
 public interface BaseModel {
 
+    int getFragment();
+
+    MenuFragmentType getFragmentType();
+
     String getLabel(int index);
 
     String getIndexLabel(int index);
@@ -13,4 +17,6 @@ public interface BaseModel {
     int getImageResource(int index);
 
     String getSpeakText(int sectionNumber);
+
+    int getColor(int index);
 }
