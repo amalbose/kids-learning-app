@@ -34,12 +34,18 @@ public class CategoryFragment extends Fragment {
      */
     public static CategoryFragment newInstance(int sectionNumber, BaseModel model) {
         CategoryFragment fragment = new CategoryFragment();
+        fragment.setRetainInstance(true);
         fragment.setModel(model);
         fragment.setSectionNumber(sectionNumber);
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedBundle){
+        super.onCreate(savedBundle);
     }
 
     @Override

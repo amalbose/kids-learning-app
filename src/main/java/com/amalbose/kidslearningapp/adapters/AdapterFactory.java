@@ -24,6 +24,10 @@ public class AdapterFactory {
                 return new ColorAdapter(fm);
             case SHAPE:
                 return new ShapeAdapter(fm);
+            case VEGETABLE:
+                return new VegetableAdapter(fm);
+            case FLOWER:
+                return new FlowerAdapter(fm);
         }
         return null;
     }

@@ -1,24 +1,34 @@
 package com.amalbose.kidslearningapp.common;
 
+import com.amalbose.kidslearningapp.R;
+
 /**
  * Created by amalbose on 30/12/17.
  */
 
 public enum MenuType {
-    ALPHABETS("Alphabets"),
-    ANIMALS("Animals"),
-    BIRDS("Birds"),
-    NUMBERS ("Numbers"),
-    COLOR("Colors"),
-    SHAPE("Shape");
+    ALPHABETS("Alphabets", R.drawable.alphabet),
+    ANIMALS("Animals", R.drawable.bear),
+    BIRDS("Birds", R.drawable.bluebird),
+    NUMBERS ("Numbers", R.drawable.number),
+    COLOR("Colors", R.drawable.color),
+    SHAPE("Shapes", R.drawable.diamond),
+    VEGETABLE("Vegetables", R.drawable.vegetables),
+    FLOWER("Flowers", R.drawable.flowers);
 
     private final String title;
+    private final int resource;
 
-    private MenuType(String title){
+    MenuType(String title, int resource){
         this.title = title;
+        this.resource = resource;
     }
 
     public String getTitle(){
         return this.title;
+    }
+
+    public int getResource(){
+        return this.resource;
     }
 }

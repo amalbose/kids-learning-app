@@ -59,7 +59,7 @@ public abstract class BaseAdapter extends FragmentPagerAdapter implements BaseMo
         this.fragmentType = fragmentType;
         switch (fragmentType) {
             case SHAPE:
-                this.fragmentLayout = R.layout.fragment_shape;
+                this.fragmentLayout = R.layout.fragment_color;
                 break;
             default:
                 this.fragmentLayout = R.layout.fragment_category;

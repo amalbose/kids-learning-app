@@ -26,6 +26,7 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="32dp"
             android:layout_marginStart="32dp"
+            android:elevation="@dimen/cardview_default_elevation"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
