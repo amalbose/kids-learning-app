@@ -1,6 +1,6 @@
-package com.amalbose.kidslearningapp.common;
+package com.amalbose.toddlertalk.common;
 
-import com.amalbose.kidslearningapp.R;
+import com.amalbose.toddlertalk.R;
 
 /**
  * Created by amalbose on 30/12/17.

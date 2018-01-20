@@ -1,4 +1,4 @@
-package com.amalbose.kidslearningapp;
+package com.amalbose.toddlertalk;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

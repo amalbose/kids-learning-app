@@ -1,8 +1,8 @@
-package com.amalbose.kidslearningapp.adapters;
+package com.amalbose.toddlertalk.adapters;
 
 import android.support.v4.app.FragmentManager;
 
-import com.amalbose.kidslearningapp.common.MenuType;
+import com.amalbose.toddlertalk.common.MenuType;
 
 /**
  * Created by amalbose on 30/12/17.

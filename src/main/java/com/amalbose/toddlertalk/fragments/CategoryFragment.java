@@ -1,4 +1,4 @@
-package com.amalbose.kidslearningapp.fragments;
+package com.amalbose.toddlertalk.fragments;
 
 
 import android.content.Context;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amalbose.kidslearningapp.R;
-import com.amalbose.kidslearningapp.common.BaseModel;
-import com.amalbose.kidslearningapp.common.MenuFragmentType;
+import com.amalbose.toddlertalk.R;
+import com.amalbose.toddlertalk.common.BaseModel;
+import com.amalbose.toddlertalk.common.MenuFragmentType;
 
 /**
  * Created by amalbose on 27/12/17.

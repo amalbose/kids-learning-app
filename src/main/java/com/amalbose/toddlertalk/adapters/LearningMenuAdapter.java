@@ -1,4 +1,4 @@
-package com.amalbose.kidslearningapp.adapters;
+package com.amalbose.toddlertalk.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.amalbose.kidslearningapp.MenuCategory;
-import com.amalbose.kidslearningapp.R;
-import com.amalbose.kidslearningapp.common.Common;
-import com.amalbose.kidslearningapp.common.MenuType;
+import com.amalbose.toddlertalk.MenuCategory;
+import com.amalbose.toddlertalk.R;
+import com.amalbose.toddlertalk.common.Common;
+import com.amalbose.toddlertalk.common.MenuType;
 
 /**
  * Created by amalbose on 1/1/18.

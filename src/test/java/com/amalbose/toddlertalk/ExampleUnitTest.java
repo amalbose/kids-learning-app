@@ -1,4 +1,4 @@
-package com.amalbose.kidslearningapp;
+package com.amalbose.toddlertalk;
 
 import org.junit.Test;
 

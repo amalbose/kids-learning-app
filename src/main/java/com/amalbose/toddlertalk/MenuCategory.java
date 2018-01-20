@@ -1,4 +1,4 @@
-package com.amalbose.kidslearningapp;
+package com.amalbose.toddlertalk;
 
 
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.amalbose.kidslearningapp.adapters.AdapterFactory;
-import com.amalbose.kidslearningapp.adapters.BaseAdapter;
-import com.amalbose.kidslearningapp.common.Common;
-import com.amalbose.kidslearningapp.common.MenuType;
+import com.amalbose.toddlertalk.adapters.AdapterFactory;
+import com.amalbose.toddlertalk.adapters.BaseAdapter;
+import com.amalbose.toddlertalk.common.Common;
+import com.amalbose.toddlertalk.common.MenuType;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class MenuCategory extends AppCompatActivity {
 
@@ -21,6 +24,8 @@ public class MenuCategory extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +39,32 @@ public class MenuCategory extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mAdView = findViewById(R.id.adViewItem);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId("ca-app-pub-2908968619933777/9705798971");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }else{
+            super.onBackPressed();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_category, menu);
+//        getMenuInflater().inflate(R.menu.menu_category, menu);
         return true;
     }
 
@@ -59,7 +79,10 @@ public class MenuCategory extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+            return false;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

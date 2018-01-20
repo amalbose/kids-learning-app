@@ -1,14 +1,14 @@
-package com.amalbose.kidslearningapp.adapters;
+package com.amalbose.toddlertalk.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.amalbose.kidslearningapp.R;
-import com.amalbose.kidslearningapp.common.BaseModel;
-import com.amalbose.kidslearningapp.common.MenuFragmentType;
-import com.amalbose.kidslearningapp.common.MenuType;
-import com.amalbose.kidslearningapp.fragments.CategoryFragment;
+import com.amalbose.toddlertalk.R;
+import com.amalbose.toddlertalk.common.BaseModel;
+import com.amalbose.toddlertalk.common.MenuFragmentType;
+import com.amalbose.toddlertalk.common.MenuType;
+import com.amalbose.toddlertalk.fragments.CategoryFragment;
 
 /**
  * Created by amalbose on 30/12/17.
