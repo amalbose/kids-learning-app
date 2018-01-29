@@ -12,7 +12,6 @@ import com.amalbose.toddlertalk.common.MenuType;
 public class VegetableAdapter extends BaseAdapter {
 
     public static int[] data = new int[]{
-            R.drawable.avocado,
             R.drawable.bokchoy,
             R.drawable.broccoli,
             R.drawable.cabbage,
@@ -33,7 +32,6 @@ public class VegetableAdapter extends BaseAdapter {
     };
 
     public static String[] dataTitle = new String[]{
-            "Avocado",
             "Bokchoy",
             "Broccoli",
             "Cabbage",

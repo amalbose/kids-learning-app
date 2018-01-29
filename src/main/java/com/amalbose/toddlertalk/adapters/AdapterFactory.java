@@ -28,6 +28,8 @@ public class AdapterFactory {
                 return new VegetableAdapter(fm);
             case FLOWER:
                 return new FlowerAdapter(fm);
+            case FRUIT:
+                return new FruitAdapter(fm);
         }
         return null;
     }

@@ -14,7 +14,8 @@ public enum MenuType {
     COLOR("Colors", R.drawable.color),
     SHAPE("Shapes", R.drawable.diamond),
     VEGETABLE("Vegetables", R.drawable.vegetables),
-    FLOWER("Flowers", R.drawable.flowers);
+    FLOWER("Flowers", R.drawable.flowers),
+    FRUIT("Fruits", R.drawable.fruits);
 
     private final String title;
     private final int resource;

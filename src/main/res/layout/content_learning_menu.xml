@@ -13,9 +13,8 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        >
-    </android.support.v7.widget.RecyclerView>
+        android:paddingBottom="50dp"
+        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -25,6 +24,6 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-2908968619933777/3378750690">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

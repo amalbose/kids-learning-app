@@ -19,14 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".LearningMenu"-->
-            <!--android:label="@string/title_activity_learning_menu"-->
-            <!--android:theme="@style/AppTheme.NoActionBar">-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value=".MainActivity" />-->
-        <!--</activity>-->
         <activity
             android:name="com.amalbose.toddlertalk.MenuCategory"
             android:label="@string/title_activity_alphabets"

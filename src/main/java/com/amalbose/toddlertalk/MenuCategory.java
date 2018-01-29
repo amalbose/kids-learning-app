@@ -43,8 +43,7 @@ public class MenuCategory extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         mInterstitialAd = new InterstitialAd(this);
-//        mInterstitialAd.setAdUnitId("ca-app-pub-2908968619933777/9705798971");
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-2908968619933777/9705798971");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         // Set up the ViewPager with the sections adapter.
@@ -75,10 +74,6 @@ public class MenuCategory extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
             return false;
